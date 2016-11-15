@@ -1,0 +1,40 @@
+{
+  "name": "couchsales_web",
+  "version": "0.1.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "Syeda Mullen",
+  "contributors": [
+    "Ben"
+  ],
+  "dependencies": {
+    "grunt": "0.4.1"
+  },
+  "devDependencies": {
+    "grunt-tomcat-deploy": "0.1.7",
+    "grunt-war": "^0.5.1",
+    "grunt-zip": "0.10.0"
+  },
+  "description": "Web Application for CouchDB Demo",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syedamullen/IS4030.git"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/syedamullen/IS4030/issues"
+  },
+  "homepage": "https://github.com/syedamullen/IS4030#readme"
+}
