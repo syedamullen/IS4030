@@ -37,13 +37,13 @@ public class CreateItemServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        BufferedReader reader = request.getReader();
-                StringBuilder result = new StringBuilder();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            result.append(line);
-        }
-        String json = result.toString();
+        String name = request.getParameter("name");
+        String description = request.getParameter("description");
+        String price = request.getParameter("price");
+        
+        
+         String json = "{\"doc_type\":\"catalog_entry\",\"name\":\"" + name + "\",\"description\":\"" + description + "\",\"price\":\"" + price + "\",\"photo\":\"xxxx\"}";  
+        
         createDocument(json);
     }
     
@@ -77,8 +77,10 @@ public class CreateItemServlet extends HttpServlet {
         System.out.println("json " + json);
         URL url = new URL(urlString);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        
         conn.setRequestProperty("Content-Type", "application/json");
         conn.setRequestMethod("PUT");
+        conn.setDoOutput(true);
         conn.setDoInput(true);
         OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream());
         out.write(json);

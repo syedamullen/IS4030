@@ -36,9 +36,8 @@ $(document).ready(function () {
            }
          */
        //note that we have run out of time to implement photos, so that value will be sent empty
-       data = "{\"doc_type\":\"catalog_entry\",\"name\":\"" + name + "\",\"description\":\"" + description + "\",\"price\":\"" + price + "\",\"photo\":\"xxxx\"}";  
-        alert (data);
-        
+       //data = "{\"doc_type\":\"catalog_entry\",\"name\":\"" + name + "\",\"description\":\"" + description + "\",\"price\":\"" + price + "\",\"photo\":\"xxxx\"}";  
+       data =$.param({ "name" : name,  "description": description, "price" : price });     
         httpSendDocument(data)
     });
     
@@ -46,12 +45,14 @@ $(document).ready(function () {
 
 function httpSendDocument(data, callback)
 {
-    var servlet = "http://localhost:8080/CouchSales_Core/CreateItemServlet";
+    var servlet = "http://localhost:8080/CouchSales_Core/CreateItemServlet?" + data;
+    alert (servlet);
+    
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
-        if (xmlHttp.readyState === 4 && xmlHttp.status === 201)
+        if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
             callback(xmlHttp.responseText);
     }
-    xmlHttp.open("PUT", servlet, true); // true for asynchronous 
-    xmlHttp.send(data);
+    xmlHttp.open("GET", servlet, true); // true for asynchronous 
+    xmlHttp.send(null);
 }
