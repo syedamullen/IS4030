@@ -16,6 +16,7 @@
     "grunt": "0.4.1"
   },
   "devDependencies": {
+    "grunt-shell": "^2.1.0",
     "grunt-tomcat-deploy": "0.1.7",
     "grunt-war": "^0.5.1",
     "grunt-zip": "0.10.0"

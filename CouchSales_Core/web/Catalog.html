@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <!--
 Copyright (C) 2016 Syeda Mullen
 
@@ -16,31 +17,38 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
-<html lang="en-us" style="height: 100%">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Couch Sales</title>
-        <meta name="description" content="Invoices Management Page for Couch Sales Application">
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
-
+        
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
     </head>
-    <body style="min-height: 750px">
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
         <div class="header-container">
             <header class="wrapper clearfix">
                 <h1 class="title">Couch Sales</h1>
                 <nav>
                     <ul>
-                        <li><a href="Catalog.html">Catalog</a></li>
-                        <li><a href="#">Invoices</a></li>
+                        <li><a href="#">Catalog</a></li>
+                        <li><a href="Invoices.html">Invoices</a></li>
                         <li><a href="index.html">About</a></li>
                     </ul>
                 </nav>
@@ -52,40 +60,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
                 <article>
                     <header>
-                        <h1>Invoices</h1>
-                        <p>Manage sales invoices here</p>
-                    </header>
-                    <section>
-                        <div id="content" style="min-height: 500px">
-                            <div id="invoiceNew">
-                                <h3>Submit New Invoice</h3>
-                                <form>
-                                    <input type="text" id="invoiceId"/>
-                                    <button id="submitNewInvoice" type="button">Submit Invoice</button>
-                                </form>
-                            </div>
-                            <div id="invoiceView">
-                                <h3>View Invoices</h3>
-                                <p></p>
-                            </div>
-                            <div id="invoiceManage">
-                                <h3>Manage Invoices</h3>
-                                <p></p>
-                            </div>
-                        </div>
-                    </section>
-                    <footer>
-                        <p></p>
-                    </footer>
+                        <h1>Couch Sales Catalog</h1>
+                        <p>Here at Couch Sales we pride ourselves on providing the best couches that money can buy. Whether you are needing something comfy to fall asleep on while watching 'Columbo' reruns or something fancy to put in your office waiting room or something elegant to haggle over in an eventual divorce proceeding, we've got the couch you are looking for.</p>
+                    </header>            
                 </article>
+                
 
                 <aside>
-                    <h3>Invoice Controls</h3>
-                    <ul>
-                        <li><button id="invoiceNewButton" type="button">Create New Invoice</button></li>
-                        <li><button id="invoiceViewButton"  type="button">View Current Invoices</button></li>
-                        <li><button id="invoiceManageButton" type="button">Manage Invoices</button></li>
-                    </ul>
+                    <h3>Catalog Controls</h3>
+                    <p></p>
                 </aside>
 
             </div> <!-- #main -->
@@ -101,6 +84,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
-        <script src="js/invoice.js"></script>
+       
+        <script src="js/catalog.js"></script>
     </body>
 </html>

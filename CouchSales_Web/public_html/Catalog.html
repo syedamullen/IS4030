@@ -30,11 +30,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
-        
+
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -55,37 +56,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </div>
 
         <div class="main-container">
-            <div class="main wrapper clearfix">
+            <div id="catalogContent" class="main wrapper clearfix">
 
                 <article>
                     <header>
                         <h1>Couch Sales Catalog</h1>
                         <p>Here at Couch Sales we pride ourselves on providing the best couches that money can buy. Whether you are needing something comfy to fall asleep on while watching 'Columbo' reruns or something fancy to put in your office waiting room or something elegant to haggle over in an eventual divorce proceeding, we've got the couch you are looking for.</p>
                     </header>
-                    <section>
-                        <h2>Sofa</h2>
-                        <p>The classics. 2 persons, 3 person, maybe 1 if they are laying down. No other combinations are valid for enjoying our couches. (Notice this implies that there must always be at least one person sitting on them, we stand by that requirement. If we feel that you are planning on putting this couch into a room but not sitting on it, we reserve the right to refuse service).</p>
-                    </section>
-                    <section>
-                        <h2>Davenport</h2>
-                        <p>These are fancier than sofas but perhaps less fancy than a throne. Suitable for entertaining the Queen</p>
-                    </section>
-                    <section>
-                        <h2>Ottoman</h2>
-                        <p>Our Ottomans are so comfy that Ataturk himself would have said "slow down boys, let's sit a spell, these Ottoman fellers ain't so bad"</p>
-                    </section>
-                    <footer>
-                        <h3>Sultan Line</h3>
-                        <p>These are the fanciest Ottomans we make</p>
-                    </footer>
                 </article>
+                
+                <button id="newItemButton" name="newItemButton" type="button">Create New Catalog Item</button>
+            </div> <!-- #main catalog content -->
+            
 
-                <aside>
-                    <h3>Catalog Controls</h3>
-                    <p></p>
-                </aside>
 
-            </div> <!-- #main -->
+
         </div> <!-- #main-container -->
 
         <div class="footer-container">
@@ -98,7 +83,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
-
-        <script src="js/main.js"></script>
+        <script type="text/javascript" src="http://localhost:5984/_utils/script/jquery.couch.js"></script>
+        <script src="js/catalog.js"></script>
     </body>
 </html>

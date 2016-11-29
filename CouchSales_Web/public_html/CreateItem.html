@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Couch Sales</title>
-        <meta name="description" content="Invoices Management Page for Couch Sales Application">
+        <meta name="description" content="Item Management Page for Couch Sales Catalog">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/normalize.min.css">
@@ -40,7 +40,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 <nav>
                     <ul>
                         <li><a href="Catalog.html">Catalog</a></li>
-                        <li><a href="#">Invoices</a></li>
+                        <li><a href="Invoices.html">Invoices</a></li>
                         <li><a href="index.html">About</a></li>
                     </ul>
                 </nav>
@@ -52,42 +52,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
                 <article>
                     <header>
-                        <h1>Invoices</h1>
-                        <p>Manage sales invoices here</p>
+                        <h1>Create New Catalog Item</h1>
+                        <p>Add an item to the sales catalog</p>
                     </header>
                     <section>
                         <div id="content" style="min-height: 500px">
-                            <div id="invoiceNew">
-                                <h3>Submit New Invoice</h3>
+                            <div id="itemNew">
+                                <h3>Submit New Item</h3>
                                 <form>
-                                    <input type="text" id="invoiceId"/>
-                                    <button id="submitNewInvoice" type="button">Submit Invoice</button>
+                                    <p>Item Name: <input type="text" id="itemName" name="itemName"/></p>
+                                    <p>Item Description: <textarea rows="3" cols="80" id="itemDescription" name="itemDescription">
+                                        </textarea></p>
+                                    <p>Item Price: <input type="text" id="itemPrice" name="itemPrice" /></p>
+                                    <p>Item Photo: <input type="file" id="itemPhoto" name="itemPhoto" /></p>
+                                    <p><button id="submitNewItem" type="button">Submit Item</button></p>
                                 </form>
                             </div>
-                            <div id="invoiceView">
-                                <h3>View Invoices</h3>
-                                <p></p>
-                            </div>
-                            <div id="invoiceManage">
-                                <h3>Manage Invoices</h3>
-                                <p></p>
-                            </div>
+
                         </div>
                     </section>
                     <footer>
                         <p></p>
                     </footer>
                 </article>
-
-                <aside>
-                    <h3>Invoice Controls</h3>
-                    <ul>
-                        <li><button id="invoiceNewButton" type="button">Create New Invoice</button></li>
-                        <li><button id="invoiceViewButton"  type="button">View Current Invoices</button></li>
-                        <li><button id="invoiceManageButton" type="button">Manage Invoices</button></li>
-                    </ul>
-                </aside>
-
             </div> <!-- #main -->
         </div> <!-- #main-container -->
 
@@ -101,6 +88,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
-        <script src="js/invoice.js"></script>
+        <script src="js/items.js"></script>
     </body>
 </html>
